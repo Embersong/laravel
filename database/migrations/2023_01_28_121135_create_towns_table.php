@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('towns', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
+            $table->string('name', 255)->unique();
             $table->foreignId('id_region')->nullable();
             $table->timestamps();
         });
