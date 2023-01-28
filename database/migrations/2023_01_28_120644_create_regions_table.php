@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
+            $table->string('name', 255)->unique();
             $table->foreignId('id_okrug')->nullable();
             $table->timestamps();
         });
